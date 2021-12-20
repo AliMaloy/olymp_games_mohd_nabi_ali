@@ -1,0 +1,129 @@
+@charset "utf-8";
+@media screen and (max-width:  600px) {/*медиазапрос, условие выполнятся, как только окно будет больше 600px*/
+.widget li {/*отвечает за детали меню*/
+  border-bottom: 1px solid #eaeaea;/*за границу между деталями меню, выйдет белая полоса, как граница*/
+  width: 80%;  
+  padding-bottom:1vh;
+  margin-bottom: 1vh; 
+}
+}
+#mennu{
+  display: none;  
+}
+@media screen and (min-width:  600px) {/*медиазапрос, условие выполнятся, как только окно будет меньше 600px*/
+.widget li {/*отвечает за детали меню*/
+  border-bottom: 1px solid #eaeaea;
+  width: 80%;  
+  padding-bottom:6%;
+  margin-bottom: 3vh; 
+}
+}
+.widget li:last-child {/*для последнего элемента из списка меню, "медальный зачет"*/
+  border-bottom: none;/*чтобы его граница(полоса снизу) не показывалась*/
+  margin-bottom: 10%;
+  padding-bottom: 10vh;
+}
+.widget a {/*для текста из меню*/
+  text-decoration: none;/*без анимаций*/
+  color: white;  
+  display: inline-block;
+}
+.widget li:before {
+  font-family: FontAwesome;/*шрифт*/
+  font-size: 6vh;
+  vertical-align:bottom;/*ыравнивает основание текущего элемента по нижней части элемента строки, расположенного ниже всех.*/
+  color: #dd3333; /*за цвет иконок отвечает*/
+  margin-right: 14px;
+}
+/*медиазапрос, условие выполнятся, как только окно будет больше 600px*/
+ @media only screen and (max-width: 600px) {/*только для пк, на телефонах не будет работать*/
+     .container {
+         display: inline-block;
+         cursor: pointer;/*курсор рука*/
+     }
+
+     .bar1, .bar2, .bar3 {/*//////////////////////*/
+         width: 35px;
+         height: 5px;
+         background-color: white;
+         margin: 6px 0;
+         transition: 0.4s;
+     }
+
+     .change .bar1 {/*для /////////////////////////////////*/
+         -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+         transform: rotate(-45deg) translate(-9px, 6px);
+     }
+
+     .change .bar2 {opacity: 0;}/*элемент невидим*/
+     .change .bar3 {
+         -webkit-transform: rotate(45deg) translate(-8px, -8px);
+         transform: rotate(45deg) translate(-8px, -8px);
+     }
+}
+#myVideo {/*(видео на фоне)*/
+    position: fixed;/*всегда на одном месте фон*/
+    right: 0;
+    bottom: 0;
+    min-width: 100%; /*всю ширину всегда занимае*/
+    min-height: 100%;/*всю высоту всегда занимае*/
+    object-fit:fill;/*полностью заполняет область, значение по умолчанию*/
+}
+    @media (min-aspect-ratio: 16/9) {/*минимальное соотношение ширины к высоте области просмотра.*/
+      #myVideo{/*для объекта с id="myVideo"(видео на фоне)*/
+      
+        width: 100%;
+        height: auto;
+      }
+    }
+    @media (max-aspect-ratio: 16/9) {/*максимальное соотношение ширины к высоте области просмотра.*/
+      #myVideo {/*для объекта с id="myVideo"(видео на фоне)*/
+       width:100%; 
+        height: 100%;
+        padding:0
+      }
+    }
+
+.center {/*для объектов с этим тегом*/
+  margin: auto;
+  width: 50%;
+  border: 5px solid rgb(0, 87, 128);
+  padding: 0.67vw;
+}
+* {
+  box-sizing: 6.74vw;
+   margin: 20;
+  }
+.widget {
+ position: fixed;/*чтобы меню не двигалось при скролле*/
+    top:0 ;  
+    left: 0; 
+    height: 100%;    /*блок всю высоту занимает*/
+    background: rgba(0, 0, 0, 0.5);   
+    width: 20%;   /*ширина всего блока меню относительно окна браузера 20%*/
+  padding: 1.3vh;  
+  border: 0.1vw rgba(0, 0, 0, 0.5); /*граница*/
+   border-radius: 0.33vw;
+  font-family: 'Roboto', sans-serif;
+}
+/*за тег h3 в классе widjet(заголовок(Олимпийские игры))*/
+.widget h3 {
+  margin-bottom: 1.3vw;/*внешний отсуп снизу*/
+  text-align: center;/*горизонтальное выравнивание текста по центру*/
+  font-size: 2vw;
+  font-weight: normal;/*Насыщенность шрифта*/
+  color:  yellow;
+}
+/*за тег ul в классе widjet(список-меню боковое)*/
+.widget ul {
+  margin-top: 5vh;/*внешний отступ сверху всего меню*/
+  padding: 0;/*без внутренних отсупов*/
+  list-style: none;/*без анимации*/
+  width: 80%;/*всегда 80% блока занимает список-меню*/
+}
+/*для li в списке нумерация с помощью псевдокласса дочерних элементов и при помощи before content отображение иконок в меню*/
+.widget li:nth-child(1):before {content:"\f05a";}/*главная страница*/
+.widget li:nth-child(2):before {content:"\f040";}/*олимпийская викторина*/
+.widget li:nth-child(3):before {content:"\f005";}/*команда недели*/
+.widget li:nth-child(4):before {content:"\f091";}/*лучшие сборные*/
+.widget li:nth-child(5):before {content:"\f0ce";}/*медальный зачёт 2021*/

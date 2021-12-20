@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">       
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_menu.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="scripts/index.js"></script>
+    <script src="scripts/menu.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Олимпийские игры</title> 
+  </head>
+  <body>  	
+  	<video autoplay muted loop id="myVideo">
+  <source src="img/forfon.mp4" type="video/mp4">
+</video>
+<div class="widget"> 
+  <center>
+    <div id="menu_name">  
+      <h3>Олимпийские игры</h3><!--наш заголовк-->
+    </div>
+      <div class="container" onclick="open_close_index(this)"><!--для меню-->
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+      </div>
+      <script>
+          document.querySelector(".container").classList.toggle("change");//находит объект класса контейнер, добавляет ему класс change, если его нет, а если есть удалить
+      </script>
+    <div class="menu_list">
+      <ul>    
+        <li><a href="index.html">Главная<br> страница</br></a></li>    
+    <li><a href="test.html">Олимпийская<br>викторина</br></a></li>
+    <li><a href="komanda.html">Команда<br> недели</br> </a></li>
+    <li><a href="top.html">Лучшие <br> сборные </br></a></li>    
+    <li><a href="tabl.html">Медальный<br>зачёт</br>2021</a></li>    
+      </ul>
+   </div> 
+  </center> 
+</div>
+<div class="slideshow-container" id="nov" style="border: 5px outset rgba(103, 175, 85, 0.98);margin-top: 3vh;background: linear-gradient(-45deg, #000000, #e73c7e, #23a6d5, #23d5ab);"><!--блок с информацией о овечкине и щербаковой вместе, он будет в зеленой границе+блок будет в градиенте под углом -45-->
+<h1 style=" text-align: center;background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);">Новости</h1><!--тоже самое только для "новости"-->
+  <div class="mySlides1"><!--информация об Овечкине и щербаковой-->
+  	<div align="right"style="height: auto; "><!--align-right, относительно -->
+    <img src="img/ovechkin.jpg"  class="rrr">
+	</div>
+	<div align="left">
+	<div class="centered">
+		<h4>Овечкин на высоте!!!</h4>
+	<h4>Овечкин не забил, но опять кого-то догнал – Дацюка по передачам. Он теперь четвертый среди русских в истории</h4>
+</div>
+	</div>
+  </div>
+
+  <div class="mySlides1"><!--в "Новости"-->
+    <div align="right"style="height: auto; ">
+    <img src="img/figur kotanie.jpg" class="rrr">
+	</div>
+	<div align="left">
+	<div class="centered">
+		<h2 >Щербакова рвётся на Олимпиаду</h2>
+	<h4> Трусова сильно сдала позиции в «Гонке за Пекин»</h4>
+</div>
+	</div>
+  </div>  
+
+  <a class="prev" onclick="plusSlides(-1, 0)">❮</a><!--для листания, значение -1 для ухода влево-->
+  <a class="next" onclick="plusSlides(1, 0)">❯</a><!--для листания, значение 1 для ухода вправо-->
+</div>
+<div id="content5"> 
+  <h1 style="color:yellow">Факт дня</h1> 
+  <p style="color:white;">Станислав Поздняков об антиковидных мерах на Играх-2022: «Ограничения будут более жесткими, чем в Токио. Думаю, организаторы Пекина решили не испытывать судьбу»</p> 
+</div>
+<div class="slideshow-container" id="wins"style="margin-bottom: 5vh;border: 5px outset rgba(247,247,0,0.98);
+border-radius: 2vh;background: linear-gradient(-45deg, #fbd3e9,#bb377d);margin-top: 5vh; ">
+	<h1 style=" text-align: center;background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);">Сегодняшние победы</h1>
+  <div class="mySlides2"style="">
+  <div class="vitalina">
+  	<center>
+  	<h2 style="text-align:center;color:white;font-size: 1.2em">Командное многоборье</h2> 
+  	</center> 	
+  	<img src="img/comand_mnogoborie.jpg" style="width:100%">  
+  </div>      
+	<div class="vitalina" style="background:linear-gradient(to right,#41aa52 40%,white 40% 60%,rgb(154, 177, 26) 60% 100%);" >
+	<div align="right"  >	
+		<h4 style="width:40%;color: white;text-align:center;padding-top: 2vw;">Капитан команды-Никита Нагорный берёт бронзу, уступив всего на 0,434 балла японцу Даики Хашимото в индивидуальном соревновании по спортивной гимнастике</h4> 		
+	</div>
+	<div align="center">
+		<i class='today_wins' style='font-size:3vw;'></i>
+	</div>
+	<div align="left">
+		<h4 style="width:40%;color:white;padding-bottom: 2vw;text-align:center;">Россия завоёвывает 1 место в командном многоборье </h4> 
+	</div>		 		
+ 	</div>
+ </div>
+  <div class="mySlides2">
+   <div class="vitalina">
+  	<center>
+  	<h2 style="text-align:center;color:white">Виталина Бацарашкина завоевала золото в стрельбе из пневматического пистолета.</h2> 
+  	</center> 	
+  	<img src="img/barashkina.jpg" style="width:100%">  
+  </div>      
+	<div class="vitalina" style="background:linear-gradient(to right,#3232a8 40%,white 40% 60%,red 60% 100%);" >
+	<div align="right"  >	<!--текст справа будет-->
+		<h4 style="width:40%;color: white;text-align:center;padding-top: 2vw;">В Токио Бацарашкина выиграла две золотые медали. Она победила в стрельбе из пистолета с 25 и 10 м.</h4> 		
+	</div>
+	<div align="center"><!--за расположение стрелок в блоке сегодняшние победы отвечает, чтобы листать-->
+		<i class='today_wins' style='font-size:3vw;'></i>
+	</div>
+	<div align="left"><!--текст слева-->
+		<h4 style="width:40%;color:white;padding-bottom: 2vw;text-align:center;">Это была самая первая медаль для России на этом турнире</h4>
+	 
+	</div>		 		
+ 	</div>
+  </div>  
+
+  <a class="prev" onclick="plusSlides(-1, 1)">❮</a>
+  <a class="next" onclick="plusSlides(1, 1)">❯</a>
+</div>
+<script>/////////////////////////////////////////////////////////////////////////////
+var slideIndex = [1,1];////////////////////////////////
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);////////
+showSlides(1, 1);//////////
+
+function plusSlides(n, no) {//отвечает за листание при нажатии на стрелки
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {//для смены слайдов
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {//цикл для прохождения на новый слайд
+     x[i].style.display = "none";  //скрытие блока который был до нажатия на стрелку
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+
+</script>
+<div id="content2"> <!--небольшой блок с информацией "Цитата дня"-->
+  <h1 style="color:yellow">Цитата дня</h1> 
+  <p style="color:white;"> «Стрелять буду до пенсии». Виталина Игоревна Бацарашкина.</p> 
+</div>
+</body>
+</html> 
+

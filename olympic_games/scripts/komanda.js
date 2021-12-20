@@ -1,0 +1,13 @@
+  window.setInterval(function(){
+   if(window.innerWidth>600){
+    document.querySelector('.fon').style.width="50vw";/*field111*/
+    document.querySelector('.menu_list').style.display="block";
+    document.querySelector('.widget').style.height="100%";
+    document.querySelector('.widget').style.width="20%"; 
+  }
+  else{
+  	 if(document.querySelector('.menu_list').style.display==="block"){
+  	document.querySelector('.fon').style.width="80vw";/*field111*/
+  }
+  }
+},0);

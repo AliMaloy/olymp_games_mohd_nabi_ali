@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">       
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_menu.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="scripts/komanda.js"></script>
+    <script src="scripts/menu.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Олимпийские игры</title>  
+</head>
+<body>
+<video autoplay muted loop id="myVideo">
+  <source src="img/forfon.mp4" type="video/mp4">
+  
+</video>
+<div class="widget">
+<center>
+<div id="menu_name">  
+ <h3>Олимпийские игры</h3>
+</div>
+    <div class="container" onclick="open_close_komanda()"><!--ответчает за кнопку в меню основном-->
+        <div class="bar1"></div><!--полоска-->
+        <div class="bar2"></div><!--полоска-->
+        <div class="bar3"></div><!--полоска-->
+    </div>
+    <script>
+        document.querySelector(".container").classList.toggle("change");
+    </script>
+  <div class="menu_list" style="margin-top: 0;">
+  <ul>    
+    <li><a href="index.html">Главная<br> страница</br></a></li>    
+    <li><a href="test.html">Олимпийская<br>викторина</br></a></li>
+    <li><a href="komanda.html">Команда<br> недели</br> </a></li>
+    <li><a href="top.html">Лучшие <br> сборные </br></a></li>    
+    <li><a href="tabl.html">Медальный<br>зачёт</br>2021</a></li>   
+  </ul>
+  </div> 
+  </center> 
+</div>
+ <div class="fon">  <!--field111-->
+ <!--<img src="" class="responsive_fon">--> 
+ <p id="demo"></p>
+ </div> 
+  </div>  
+  <div id="content6">
+ <div class='card'>
+<div style='width:100%; height: auto; margin-top:1.3vh; text-align:center'> 
+  <div class='card-body'>
+   <h2 id=block2 class="rainbow-animated"></h2> 
+  <h3 id=block3 style="margin-top: 5vh;"></h3>
+  <input type='button'  class='btn btn-primary' style='margin-bottom:0;' value='Закрыть' onmousedown='outviewDiv()'><!--срабатывает в момент нажатия на кнопку мыши.-->
+  </div>
+  </div>
+</div>
+  </div>
+  <script type="text/javascript">
+    function outviewDiv(){
+  document.getElementById('content6').style.display = "none";  
+};
+
+
+
+function give(val) {//отвечает за выдачу контента при нажатии на кнопки с названием вида спорта
+  document.getElementById('content6').style.display = "block";
+  var obj = document.getElementById('block2');
+  obj.innerHTML = sport[val];
+  var obj = document.getElementById('block3');
+  obj.innerHTML = info[val];   
+}
+let sport,info,players,text="";
+info=["Елена Веснина в паре с Вероникой Кудерметовой заняла четвертое место, а в миксте с Асланом Карацевым стала второй.","София Позднякова. В личном первенстве мы увидели российский финал. В нем снова уступила Софья Великая — на этот раз Софии Поздняковой (Лохановой). Позднякова с успехов в «личке» и командном первенстве начала погоню за своим отцом — президентом ОКР и четырехкратным олимпийским чемпионом Станиславом Поздняковым. Чтобы сравняться с ним по наградам, у нее есть еще минимум две Олимпиады, ведь Софии всего 24 года. ","Светлана Ромашина. Ее олимпийский триумф — рекорд из категории невозможных. Мы не знаем, будут ли еще семикратные олимпийские чемпионки в синхронном плавании, но Ромашина после Токио шагнула в совершенно другую категорию — наравне с великими Марет Бьорген, Ларисой Латыниной и Биргит Фишер. Главное отличие Светланы от них — это полное отсутствие в коллекции наград серебряных медалей. За свою долгую карьеру она так и не узнала, что такое поражение.","Виталина Бацарашкина. На стрельбу перед каждой Олимпиадой мы смотрим с призрачной надеждой, но вот о том, чтобы бороться за лидерство в общем зачете и иметь двукратную чемпионку одних Игр, до Токио не приходилось даже и мечтать. Пока мы не узнали о милой девушке из Омска. У нее сразу три медали ОИ-2020 — две личные в стрельбе из пистолета с 10 м и с 25 м, а также серебро в смешанной команде. В личном первенстве она так и осталась непобежденной, остановив гегемонию Китая.","Женская сборная России по стрельбе стала серебрянным призёром Олимпийских игр! Как и пять лет назад в Рио-де-Жанейро. На пути к золоту, как и тогда, встали роботы из Южной кореи, которые не срывают выстрелы и не ошибаются. Но российские лучницы в любом случае - героини.","Евгений Рылов. Он выиграл для нас первое за 25 лет золото в олимпийском бассейне, затем сделал олимпийский дубль и остановил многолетнюю серию доминирования Америки в плавании на спине. Затем Рылова поставили в непрофильную для него дисциплину — эстафету 4 по 200 вольным стилем, и это решение оказалось гениальным. Именно Евгений вытащил нашу четверку к серебру.","Абдулрашид Садулаев. Самый известный и популярный в стране борец вольного стиля ехал в Токио уже в статусе олимпийского чемпиона и четырехкратного чемпиона мира. Понятное дело, что и в Японии его могла устроить только одна награда. И Русский Танк не подвел, не оставив шанса ни одному из соперников в категории до 97 кг. Это было тотальное уничтожение.","Максим Храмцов. 23-летний парень из Нижневартовска выходил на финальный поединок в категории до 80 килограммов против представителя Иордании Салеха аш-Шарабати с переломом руки. Травму Максим получил в мае на предолимпийском чемпионате Европы. Врачи смогли справиться с повреждением, и он вскоре возобновил тренировки, но за две недели до турнира на спарринге травма снова дала о себе знать. Максим не должен был ехать в таком состоянии на Игры. Рассчитывать на успешное выступление было сложно. И его золото — это настоящий спортивный подвиг.","Нам нельзя не включить в список еще одного серебряного призера. Хотя разве хоть кто-то в России может назвать Дину Аверину проигравшей? Она уступила первую строчку Линой Ашрам из Израиля только в результате судейского произвола. Во всех упражнениях Аверина выступала чище, в то время как Ашрам допустила ошибку на упражнении с лентой. Делегация подала несколько протестов, но только на результаты они повлиять уже не могли.","Денис Аблязин. Если от чемпионов мира Никиты Нагорного и Артура Далалояна мы и так ждали сверхрезультатов, то Денис Аблязин приятно удивил своей готовностью. Аблязин — единственный в команде, кто смог сохранить свой настрой на личные выступления и сделал все, чтобы стать олимпийским чемпионом и в опорном прыжке. Помешали выиграть ему только судьи, занимающиеся откровенным буквоедством. ","Мария Ласицкене. Единственным нашим шансом организовать концерт Чайковского на Национальном стадионе оставалась Ласицкене. Фаворитом она при этом точно не была — есть мощные украинки, хорошие британка и австралийка. Мария сама летела в Японию с тяжелой травмой и была явно не в лучших своих кондициях. Но то, что она показала на Олимпиаде, запомнится на долгие годы. При всем уважении к другим спортсменам именно успех Ласицкене — главная победа в Токио. И шанс на реанимацию российской легкой атлетики."]
+players=['img/tennis.jpg','img/fehtovanie.jpg','img/sinh_plav.jpg','img/strelba.jpg','img/strelba_is_luka.jpg',
+'img/swim.jpg','img/borba.jpg','img/tecvondo.jpg','img/hud_gymnas.jpg','img/gymnastic.jpg','img/atletica.jpg'];
+sport = ["Теннис", 'Фехтование', "Синхронное плавание", "Стрельба","Стрельба из лука", "Плавание", "Борьба", " Тхэквондо","Художественная гимнастика", "Гимнастика","Лёгкая атлетитка"];
+ 
+for (var i = 0; i < sport.length; i++) {
+  if(i>4){//>4
+  if(i==1){
+    text+= "<div style='position: absolute;background: rgba(0, 0, 0, 0.5); color: #f1f1f1;top:"+(8*(5/2)+2)+"vh;   margin-top:"+5.21+"vh; right:"+(43)+"%;text-align:center;'>"
+  }
+  else{
+    if(i==6){//борьба
+      text+= "<div style='position: absolute; background: rgba(0, 0, 0, 0.5);  color: #f1f1f1;top:"+(18)+"vh;   margin-top:"+5.21+"vh; right:"+(1.25)+"%;text-align:center;'>"
+    }
+    
+    
+  else{
+  if(i%2==0){//Художественная гимнастика=8, Лёгкая атлетитка=10
+    if(i==8){
+      text+= "<div style='position: absolute; background: rgba(0, 0, 0, 0.5);  color: #f1f1f1;top:"+(53)+"vh;   margin-top:"+1.3*8+"vh; right:"+(14*((i-5)/2)+24)+"%;text-align:center;'>"
+    }
+   if(i==10){
+    text+= "<div style='position: absolute; background: rgba(0, 0, 0, 0.5);  color: #f1f1f1;top:"+(53)+"vh;   margin-top:"+1.3*8+"vh; right:"+(1*((i-5)/2)+5)+"%;text-align:center;'>"
+   }
+  }
+  else{//плавание=5, тхеквондо=7, гимнастика=9
+    if(i==5){//плавание
+      text+= "<div style='position: absolute; background: rgba(0, 0, 0, 0.5);  color: #f1f1f1;top:"+(35)+"vh;   margin-top:"+1.3*(i+1)+"vh; right:"+(-14*(((i-5)+1)/2)+80)+"%;text-align:center;'>"
+    }
+    if(i==7){//тхеквондо
+      text+= "<div style='position: absolute; background: rgba(0, 0, 0, 0.5);  color: #f1f1f1;top:"+(35)+"vh;   margin-top:"+1.3*(6)+"vh; right:"+(-14*(((i-5)+1)/2)+30)+"%;text-align:center;'>"
+    }
+    if(i==9){//гимнастика
+      text+= "<div style='position: absolute; background: rgba(0, 0, 0, 0.5);  color: #f1f1f1;top:"+(35)+"vh;   margin-top:"+1.3*(6)+"vh; right:"+(-14*(((i-5)+1)/2)+75)+"%;text-align:center;'>"
+    }
+  }
+}
+}
+}//>4
+  else{
+  if(i%2==0){//лёгкая атлетика синхронное плавание стрельба
+    if(i==0){//теннис
+      text+= "<div style='position: absolute; background: rgba(0, 0, 0, 0.5);  color: #f1f1f1;top:"+(2)+"vh;   margin-top:"+1.3+"vh; right:"+(14*(i/2)+29)+"%;text-align:center;'>"
+    }
+   if(i==2){//синхронное плавание
+    text+= "<div style='position: absolute; background: rgba(0, 0, 0, 0.5);  color: #f1f1f1;top:"+(2)+"vh;   margin-top:"+1.3+"vh; right:"+(14*(i/2)+40)+"%;text-align:center;'>"
+   }
+   if(i==4){//стрельба из лука
+    text+= "<div style='position: absolute; background: rgba(0, 0, 0, 0.5);  color: #f1f1f1;top:"+18+"vh;   margin-top:"+1.3*i+"vh; right:"+(14*(i/4)+49)+"%;text-align:center;'>"
+   }
+  }
+  else{
+    if(i==1){//фехтование
+      text+= "<div style='position: absolute; background: rgba(0, 0, 0, 0.5);  color: #f1f1f1;top:"+2+"vh;   margin-top:"+1.3+"vh; right:"+(1*(i/4)+1)+"%;text-align:center;'>"
+    }
+    if(i==3){//стрельба
+      text+= "<div style='position: absolute; background: rgba(0, 0, 0, 0.5);  color: #f1f1f1;top:"+18+"vh;   margin-top:"+5.2+"vh; right:"+(32)+"%;text-align:center;'>"
+    }
+  }
+  }  
+  text+="<div class='grow'>"  
+  text+="<img src='"+players[i]+"' id='kom_img' class='round'>"
+  text+="</div>" 
+    text+="<button id='"+i+"'class='ghost-button' onclick='give(this.id)'><h3 class='rainbow'>"+sport[i]+"</h3></button>"   
+ text+="</div>";
+ }
+document.getElementById("demo").innerHTML = text;
+  </script>   
+<div id="content7">
+ <div class='card' style="right: 0; top: 0;">
+<div style='width:100%;  margin-top:1.3vw; text-align:center'> 
+  <div class='card-body'>
+   <h1 class="rainbow-animated" style="font-size: 2vh;">Символические сборные</h1>
+  </div>
+  </div>
+</div>
+  </div>
+
+  
+</body>
+</html>
